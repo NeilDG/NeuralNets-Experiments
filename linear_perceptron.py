@@ -62,7 +62,7 @@ class LinearPerceptron(object):
                         
                 for i in range(k):
                     self.Y[i] = np.exp(A[i]) / np.sum(np.exp(A))
-                #print("Y: ", self.Y)
+                #print("Y: ", self.Y, "Sum of Y: " ,np.sum(self.Y))
                     
                 for i in range(k):
                     for j in range(d):
@@ -74,10 +74,39 @@ class LinearPerceptron(object):
                         sum_error += error
                         self.W[i,j] = self.W[i,j] + self.lr * error * self.X[t,j]
             
-            print('>epoch=%d, lrate=%.3f, error=%.3f' % (epoch, self.lr, sum_error))
+            #print('>epoch=%d, lrate=%.3f, error=%.3f' % (epoch, self.lr, sum_error))
                      
    
-    
+    def evaluate(self, T, class_index = -1):
+        #remove class for testing
+        T_hat = np.delete(T, class_index, axis = 1)
+        d = np.size(T, axis = 1)
+        k = np.size(self.Y)
+        
+        sum_error = 0.0;
+        
+        for t in range (np.size(T_hat, axis = 0)):
+            A = np.zeros(np.size(self.Y, axis = 0))
+            for i in range(k):
+                for j in range(d):
+                    A[i] += self.W[i,j] * self.X[t,j]
+                        
+            for i in range(k):
+                self.Y[i] = np.exp(A[i]) / np.sum(np.exp(A))
+                    
+
+            pred = self.output(self.Y)
+            label = T[t,class_index]
+            actual = self.identifyClass(label)
+            if  pred != actual:
+                sum_error+=1
+            
+        
+        accuracy = ((sum_error/t * 1.0))*100.0
+        print("Total errors: " ,sum_error, " Test size: " ,t, " Accuracy: " ,accuracy)
+        return accuracy
+                
+            
     # Make a prediction with weights
     def output_old(self, row):
     	activation = self.W[0]
