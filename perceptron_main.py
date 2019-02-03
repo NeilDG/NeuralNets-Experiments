@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import utility as util
 import linear_perceptron as lp
-
+import multilayer_perceptron as mlp
 
 def cross_validation_split(dataset, folds=10):
     seed(1)
@@ -28,11 +28,7 @@ def cross_validation_split(dataset, folds=10):
         dataset_split.append(fold)
     return dataset_split
 
-def main(): 
-    #load iris dataset
-    raw = pd.read_csv("dataset/iris.csv")
-    dataset = raw.values
-    
+def lp_test(dataset):
     size = np.arange(np.size(dataset, axis = 0))
     folds = cross_validation_split(size)
     
@@ -62,6 +58,46 @@ def main():
         
     total_accuracy = sum_accuracy / np.size(folds, axis = 0) * 1.0
     print("Total accuracy using 10-fold cross validation: ", total_accuracy)
+
+def mlp_test(dataset):
+    size = np.arange(np.size(dataset, axis = 0))
+    folds = cross_validation_split(size)
+    
+    sum_accuracy = 0.0
+
+    for i in range(np.size(folds, axis = 0)):
+        train = np.empty([0, np.size(dataset, axis = 1)], dtype = np.object)
+        
+        #assemble training data
+        for j in range(np.size(folds,axis = 0)):
+            if i != j:
+                for k in range(np.size(folds[j], axis = 0)):
+                    ind = folds[j][k]
+                    train = np.insert(train, 0, values = dataset[ind], axis = 0)
+    
+        multilayerPerceptron = mlp.MultilayerPerceptron(train, learning_rate = 0.001, epochs = 10)
+        multilayerPerceptron.learn()
+        
+        #assemble test
+        test = np.empty([0, np.size(dataset, axis = 1)], dtype = np.object)
+        for k in range(np.size(folds[i], axis = 0)):
+            ind = folds[i][k]
+            test = np.insert(test, 0, values = dataset[ind], axis = 0)
+        
+        
+        sum_accuracy += multilayerPerceptron.evaluate(test)
+        
+    total_accuracy = sum_accuracy / np.size(folds, axis = 0) * 1.0
+    print("Total accuracy using 10-fold cross validation: ", total_accuracy)
+    
+def main(): 
+    #load iris dataset
+    raw = pd.read_csv("dataset/iris.csv")
+    dataset = raw.values
+    
+    #lp_test(dataset)
+    mlp_test(dataset)
+    
     
 
 main()
