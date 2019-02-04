@@ -1,0 +1,299 @@
+[LP] Training data with learning rate:  1.0  Epochs:  10
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  6.0  Test size:  14  Accuracy:  42.857142857142854
+Total accuracy using 10-fold cross validation:  71.42857142857143
+[LP] Training data with learning rate:  1.0  Epochs:  100
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  6.0  Test size:  14  Accuracy:  42.857142857142854
+Total accuracy using 10-fold cross validation:  71.42857142857143
+[LP] Training data with learning rate:  1.0  Epochs:  250
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  6.0  Test size:  14  Accuracy:  42.857142857142854
+Total accuracy using 10-fold cross validation:  71.42857142857143
+[LP] Training data with learning rate:  1.0  Epochs:  500
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  6.0  Test size:  14  Accuracy:  42.857142857142854
+Total accuracy using 10-fold cross validation:  71.42857142857143
+
+￼
+[LP] Training data with learning rate:  0.5  Epochs:  10
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+Total accuracy using 10-fold cross validation:  76.42857142857143
+[LP] Training data with learning rate:  0.5  Epochs:  100
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  6.0  Test size:  14  Accuracy:  42.857142857142854
+Total accuracy using 10-fold cross validation:  71.42857142857143
+[LP] Training data with learning rate:  0.5  Epochs:  250
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  6.0  Test size:  14  Accuracy:  42.857142857142854
+Total accuracy using 10-fold cross validation:  71.42857142857143
+[LP] Training data with learning rate:  0.5  Epochs:  500
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  6.0  Test size:  14  Accuracy:  42.857142857142854
+Total accuracy using 10-fold cross validation:  71.42857142857143
+
+￼
+[LP] Training data with learning rate:  0.1  Epochs:  10
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  12.0  Test size:  14  Accuracy:  85.71428571428571
+[LP] Total errors:  5.0  Test size:  14  Accuracy:  35.714285714285715
+[LP] Total errors:  12.0  Test size:  14  Accuracy:  85.71428571428571
+[LP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+Total accuracy using 10-fold cross validation:  65.71428571428572
+[LP] Training data with learning rate:  0.1  Epochs:  100
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  6.0  Test size:  14  Accuracy:  42.857142857142854
+Total accuracy using 10-fold cross validation:  71.42857142857143
+[MLP] Training data with learning rate:  0.1  Epochs:  250
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[MLP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[MLP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+[MLP] Total errors:  7.0  Test size:  14  Accuracy:  50.0
+Total accuracy using 10-fold cross validation:  67.14285714285714
+[LP] Training data with learning rate:  0.1  Epochs:  500
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+C:\ProgramData\Anaconda3\lib\site-packages\numpy\core\fromnumeric.py:83: RuntimeWarning: overflow encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  6.0  Test size:  14  Accuracy:  42.857142857142854
+Total accuracy using 10-fold cross validation:  71.42857142857143
+
+￼
+[LP] Training data with learning rate:  0.05  Epochs:  10
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  7.0  Test size:  14  Accuracy:  50.0
+[LP] Total errors:  12.0  Test size:  14  Accuracy:  85.71428571428571
+[LP] Total errors:  6.0  Test size:  14  Accuracy:  42.857142857142854
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[LP] Total errors:  12.0  Test size:  14  Accuracy:  85.71428571428571
+[LP] Total errors:  12.0  Test size:  14  Accuracy:  85.71428571428571
+Total accuracy using 10-fold cross validation:  75.71428571428571
+[LP] Training data with learning rate:  0.05  Epochs:  100
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  6.0  Test size:  14  Accuracy:  42.857142857142854
+Total accuracy using 10-fold cross validation:  70.71428571428572
+[LP] Training data with learning rate:  0.05  Epochs:  250
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  6.0  Test size:  14  Accuracy:  42.857142857142854
+Total accuracy using 10-fold cross validation:  71.42857142857143
+[LP] Training data with learning rate:  0.05  Epochs:  500
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  6.0  Test size:  14  Accuracy:  42.857142857142854
+Total accuracy using 10-fold cross validation:  71.42857142857143
+
+[LP] Training data with learning rate:  0.01  Epochs:  10
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  12.0  Test size:  14  Accuracy:  85.71428571428571
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+Total accuracy using 10-fold cross validation:  72.14285714285714
+[LP] Training data with learning rate:  0.01  Epochs:  100
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  5.0  Test size:  14  Accuracy:  35.714285714285715
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+Total accuracy using 10-fold cross validation:  68.57142857142857
+[LP] Training data with learning rate:  0.01  Epochs:  250
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+Total accuracy using 10-fold cross validation:  73.57142857142857
+[LP] Training data with learning rate:  0.01  Epochs:  500
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  6.0  Test size:  14  Accuracy:  42.857142857142854
+Total accuracy using 10-fold cross validation:  71.42857142857143
+
+[LP] Training data with learning rate:  0.001  Epochs:  10
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[LP] Total errors:  14.0  Test size:  14  Accuracy:  100.0
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  7.0  Test size:  14  Accuracy:  50.0
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  12.0  Test size:  14  Accuracy:  85.71428571428571
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  12.0  Test size:  14  Accuracy:  85.71428571428571
+Total accuracy using 10-fold cross validation:  77.14285714285714
+[LP] Training data with learning rate:  0.001  Epochs:  100
+[LP] Total errors:  12.0  Test size:  14  Accuracy:  85.71428571428571
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+[LP] Total errors:  12.0  Test size:  14  Accuracy:  85.71428571428571
+[LP] Total errors:  12.0  Test size:  14  Accuracy:  85.71428571428571
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  12.0  Test size:  14  Accuracy:  85.71428571428571
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+Total accuracy using 10-fold cross validation:  74.28571428571428
+[LP] Training data with learning rate:  0.001  Epochs:  250
+[LP] Total errors:  6.0  Test size:  14  Accuracy:  42.857142857142854
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+Total accuracy using 10-fold cross validation:  66.42857142857142
+[LP] Training data with learning rate:  0.001  Epochs:  500
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  12.0  Test size:  14  Accuracy:  85.71428571428571
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[LP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+[LP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[LP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+Total accuracy using 10-fold cross validation:  70.71428571428571
+
