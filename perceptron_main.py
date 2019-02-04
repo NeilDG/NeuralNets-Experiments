@@ -60,6 +60,9 @@ def lp_test(dataset):
     print("Total accuracy using 10-fold cross validation: ", total_accuracy)
 
 def mlp_test(dataset):
+    lr = 1.0; epochs = 500
+    print("[MLP] Training data with learning rate: " ,lr, " Epochs: " ,epochs)
+    
     size = np.arange(np.size(dataset, axis = 0))
     folds = cross_validation_split(size)
     
@@ -75,7 +78,7 @@ def mlp_test(dataset):
                     ind = folds[j][k]
                     train = np.insert(train, 0, values = dataset[ind], axis = 0)
     
-        multilayerPerceptron = mlp.MultilayerPerceptron(train, learning_rate = 0.001, epochs = 10)
+        multilayerPerceptron = mlp.MultilayerPerceptron(train, learning_rate = lr, epochs = epochs)
         multilayerPerceptron.learn()
         
         #assemble test

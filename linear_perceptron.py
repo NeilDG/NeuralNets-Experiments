@@ -103,7 +103,7 @@ class LinearPerceptron(object):
             
         
         accuracy = ((sum_error/t * 1.0))*100.0
-        print("Total errors: " ,sum_error, " Test size: " ,t, " Accuracy: " ,accuracy)
+        print("[LP] Total errors: " ,sum_error, " Test size: " ,t, " Accuracy: " ,accuracy)
         return accuracy
                 
             

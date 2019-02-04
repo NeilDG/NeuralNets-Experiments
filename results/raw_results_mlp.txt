@@ -1,0 +1,103 @@
+[MLP] Training data with learning rate:  0.05  Epochs:  10
+[MLP] Total errors:  7.0  Test size:  14  Accuracy:  50.0
+[MLP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[MLP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[MLP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[MLP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+[MLP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+[MLP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+Total accuracy using 10-fold cross validation:  70.0
+
+[MLP] Training data with learning rate:  0.05  Epochs:  100
+[MLP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[MLP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[MLP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[MLP] Total errors:  12.0  Test size:  14  Accuracy:  85.71428571428571
+[MLP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[MLP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+[MLP] Total errors:  6.0  Test size:  14  Accuracy:  42.857142857142854
+Total accuracy using 10-fold cross validation:  73.57142857142857
+
+[MLP] Training data with learning rate:  0.05  Epochs:  250
+[MLP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[MLP] Total errors:  12.0  Test size:  14  Accuracy:  85.71428571428571
+[MLP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  7.0  Test size:  14  Accuracy:  50.0
+[MLP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[MLP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[MLP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+[MLP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[MLP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+Total accuracy using 10-fold cross validation:  72.14285714285714
+
+[MLP] Training data with learning rate:  0.05  Epochs:  500
+[MLP] Total errors:  7.0  Test size:  14  Accuracy:  50.0
+[MLP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[MLP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  7.0  Test size:  14  Accuracy:  50.0
+[MLP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[MLP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[MLP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[MLP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+[MLP] Total errors:  6.0  Test size:  14  Accuracy:  42.857142857142854
+Total accuracy using 10-fold cross validation:  63.57142857142857
+
+[MLP] Training data with learning rate:  0.001  Epochs:  10
+[MLP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[MLP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  7.0  Test size:  14  Accuracy:  50.0
+[MLP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[MLP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[MLP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[MLP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+[MLP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+Total accuracy using 10-fold cross validation:  69.28571428571429
+
+[MLP] Training data with learning rate:  0.001  Epochs:  100
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[MLP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  12.0  Test size:  14  Accuracy:  85.71428571428571
+[MLP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[MLP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[MLP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+Total accuracy using 10-fold cross validation:  72.14285714285714
+
+[MLP] Training data with learning rate:  0.001  Epochs:  250
+[MLP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[MLP] Total errors:  12.0  Test size:  14  Accuracy:  85.71428571428571
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[MLP] Total errors:  7.0  Test size:  14  Accuracy:  50.0
+[MLP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  7.0  Test size:  14  Accuracy:  50.0
+[MLP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[MLP] Total errors:  6.0  Test size:  14  Accuracy:  42.857142857142854
+Total accuracy using 10-fold cross validation:  68.57142857142857
+
+[MLP] Training data with learning rate:  0.001  Epochs:  500
+[MLP] Total errors:  7.0  Test size:  14  Accuracy:  50.0
+[MLP] Total errors:  9.0  Test size:  14  Accuracy:  64.28571428571429
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  11.0  Test size:  14  Accuracy:  78.57142857142857
+[MLP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+[MLP] Total errors:  10.0  Test size:  14  Accuracy:  71.42857142857143
+[MLP] Total errors:  7.0  Test size:  14  Accuracy:  50.0
+[MLP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+[MLP] Total errors:  8.0  Test size:  14  Accuracy:  57.14285714285714
+[MLP] Total errors:  13.0  Test size:  14  Accuracy:  92.85714285714286
+Total accuracy using 10-fold cross validation:  68.57142857142857
