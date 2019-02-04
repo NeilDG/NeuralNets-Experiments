@@ -20,7 +20,7 @@ class MultilayerPerceptron(object):
         self.X = np.delete(self.training_data, class_index, axis = 1)
         self.X = np.insert(self.X, 0, values = 1, axis = 1) #insert bias
         
-        self.Z = np.empty(np.size(self.X, axis = 1)) #create Z (hidden) vector based from X TODO: make this a hyperparameter
+        self.Z = np.empty(np.size(self.X, axis = 1)) #create Z (hidden) vector based from X 
         
         #weight vector to Z initialize
         train_col = np.size(self.X, axis = 1)
@@ -151,5 +151,5 @@ class MultilayerPerceptron(object):
             
         
         accuracy = ((sum_error/t * 1.0))*100.0
-        print("[MLP] Total errors: " ,sum_error, " Test size: " ,t, " Accuracy: " ,accuracy)
+        print("[MLP] Total errors: " ,sum_error, " Test size: " ,t, " Accuracy: %.3f" %(accuracy))
         return accuracy

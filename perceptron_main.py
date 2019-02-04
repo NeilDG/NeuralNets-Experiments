@@ -99,7 +99,7 @@ def mlp_test(dataset, lr, epochs):
         A = np.insert(A, 0, values = accuracy, axis = 0)
         
     total_accuracy = sum_accuracy / np.size(folds, axis = 0) * 1.0
-    print("Total accuracy using 10-fold cross validation: ", total_accuracy)
+    print("Total accuracy using 10-fold cross validation: %.3f" %total_accuracy)
     
     return A
 
@@ -365,7 +365,7 @@ def main():
     raw = pd.read_csv("dataset/iris.csv")
     dataset = raw.values
     
-    batch_lp(dataset)   
+    #batch_lp(dataset)   
     batch_mlp(dataset)
 
 main()
