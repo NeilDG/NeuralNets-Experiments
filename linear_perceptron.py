@@ -13,6 +13,9 @@ class LinearPerceptron(object):
     
     def __init__(self, training_data, learning_rate = 0.001, epochs = 10, class_index = -1, class_size = 3):
         self.training_data = training_data
+        self.class_index = class_index
+        self.epochs = epochs
+        self.lr = learning_rate
         
         #remove class for training
         self.X = np.delete(self.training_data, class_index, axis = 1)
@@ -22,10 +25,6 @@ class LinearPerceptron(object):
         self.W = np.array([np.random.random(train_col)])
         for i in range(class_size):
             self.W = np.insert(self.W, 0, values = np.random.random(train_col), axis = 0)
-            
-        self.class_index = class_index
-        self.epochs = epochs
-        self.lr = learning_rate
         
         self.X = np.insert(self.X, 0, values = 1, axis = 1) #insert bias
         self.Y = np.zeros(class_size)
