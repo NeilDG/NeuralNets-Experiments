@@ -61,11 +61,11 @@ def lp_test(dataset, lr, epochs):
         A = np.insert(A, 0, values = accuracy, axis = 0)
         
     total_accuracy = sum_accuracy / np.size(folds, axis = 0) * 1.0
-    print("Total accuracy using 10-fold cross validation: ", total_accuracy)
+    print("Total accuracy using 10-fold cross validation: %.3f" %total_accuracy)
     
     return A
 
-def mlp_test(dataset, lr, epochs):
+def mlp_test(dataset, lr, epochs, hasMomentum, momentum = 0.5):
     print("[MLP] Training data with learning rate: " ,lr, " Epochs: " ,epochs)
     
     size = np.arange(np.size(dataset, axis = 0))
@@ -84,7 +84,7 @@ def mlp_test(dataset, lr, epochs):
                     ind = folds[j][k]
                     train = np.insert(train, 0, values = dataset[ind], axis = 0)
     
-        multilayerPerceptron = mlp.MultilayerPerceptron(train, learning_rate = lr, epochs = epochs)
+        multilayerPerceptron = mlp.MultilayerPerceptron(train, learning_rate = lr, epochs = epochs, hasMomentum = hasMomentum, momentum = momentum)
         multilayerPerceptron.learn()
         
         #assemble test
@@ -97,7 +97,8 @@ def mlp_test(dataset, lr, epochs):
         accuracy = multilayerPerceptron.evaluate(test)
         sum_accuracy += accuracy
         A = np.insert(A, 0, values = accuracy, axis = 0)
-        
+       
+    del multilayerPerceptron
     total_accuracy = sum_accuracy / np.size(folds, axis = 0) * 1.0
     print("Total accuracy using 10-fold cross validation: %.3f" %total_accuracy)
     
@@ -157,7 +158,7 @@ def batch_lp(dataset):
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 250
-    R = mlp_test(dataset, lr, epochs)
+    R = lp_test(dataset, lr, epochs)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 500
@@ -235,129 +236,129 @@ def batch_mlp(dataset):
     
     df = pd.DataFrame([])
     
-    lr = 1.0; epochs = 10
-    R = mlp_test(dataset, lr, epochs)
+    lr = 1.0; epochs = 10; momentum = 0.1
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 100
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 250
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 500
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     df.plot()
-    plt.savefig("figures/perceptron/mlp_lr_{}.png".format(lr), bbox_inches='tight', dpi = 400)
+    plt.savefig("figures/perceptron/mlp_momentum_lr_{}.png".format(lr), bbox_inches='tight', dpi = 400)
     plt.show()
     
     df = pd.DataFrame([])
     lr = 0.5; epochs = 10
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 100
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 250
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 500
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     df.plot()
-    plt.savefig("figures/perceptron/mlp_lr_{}.png".format(lr), bbox_inches='tight', dpi = 400)
+    plt.savefig("figures/perceptron/mlp_momentum_lr_{}.png".format(lr), bbox_inches='tight', dpi = 400)
     plt.show()
     
     df = pd.DataFrame([])
     lr = 0.1; epochs = 10
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 100
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 250
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 500
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     df.plot()
-    plt.savefig("figures/perceptron/mlp_lr_{}.png".format(lr), bbox_inches='tight', dpi = 400)
+    plt.savefig("figures/perceptron/mlp_momentum_lr_{}.png".format(lr), bbox_inches='tight', dpi = 400)
     plt.show()
     
     df = pd.DataFrame([])
     lr = 0.05; epochs = 10
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 100
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 250
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 500
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     df.plot()
-    plt.savefig("figures/perceptron/mlp_lr_{}.png".format(lr), bbox_inches='tight', dpi = 400)
+    plt.savefig("figures/perceptron/mlp_momentum_lr_{}.png".format(lr), bbox_inches='tight', dpi = 400)
     plt.show()
     
     df = pd.DataFrame([])
     lr = 0.01; epochs = 10
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 100
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 250
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 500
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     df.plot()
-    plt.savefig("figures/perceptron/mlp_lr_{}.png".format(lr), bbox_inches='tight', dpi = 400)
+    plt.savefig("figures/perceptron/mlp_momentum_lr_{}.png".format(lr), bbox_inches='tight', dpi = 400)
     plt.show()
     
     df = pd.DataFrame([])
     lr = 0.001; epochs = 10
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 100
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 250
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     epochs = 500
-    R = mlp_test(dataset, lr, epochs)
+    R = mlp_test(dataset, lr, epochs, hasMomentum = True, momentum = momentum)
     pd.DataFrame.insert(df, 0, "LR = %.3f Epoch =  %d" %(lr, epochs), R, allow_duplicates = True) 
     
     df.plot()
-    plt.savefig("figures/perceptron/mlp_lr_{}.png".format(lr), bbox_inches='tight', dpi = 400)
+    plt.savefig("figures/perceptron/mlp_momentum_lr_{}.png".format(lr), bbox_inches='tight', dpi = 400)
     plt.show()
     
 def main(): 
@@ -366,7 +367,8 @@ def main():
     dataset = raw.values
     
     #batch_lp(dataset)   
-    batch_mlp(dataset)
+    #batch_mlp(dataset)
+    mlp_test(dataset, lr = 0.001, epochs = 500, hasMomentum = False)
 
 main()
 

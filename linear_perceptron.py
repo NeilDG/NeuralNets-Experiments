@@ -22,9 +22,9 @@ class LinearPerceptron(object):
 
         #weight vector with bias
         train_col = np.size(self.X, axis = 1) + 1
-        self.W = np.array([np.random.random(train_col)])
+        self.W = np.array([np.random.normal(loc = 0, scale = 0.01, size = train_col)], dtype = np.double)
         for i in range(class_size):
-            self.W = np.insert(self.W, 0, values = np.random.random(train_col), axis = 0)
+            self.W = np.insert(self.W, 0, values = np.random.normal(loc = 0, scale = 0.01, size = train_col), axis = 0)
         
         self.X = np.insert(self.X, 0, values = 1, axis = 1) #insert bias
         self.Y = np.zeros(class_size)
@@ -45,6 +45,37 @@ class LinearPerceptron(object):
         index = np.argmax(Y);
         return index
                 
+#    def learn(self):
+#        d = np.size(self.X, axis = 1)
+#        k = np.size(self.Y)
+#        
+#        
+#        for epoch in range(self.epochs):
+#            sum_error = 0.0
+#            
+#            for t in range(np.size(self.X, axis = 0)):
+#                A = np.zeros(np.size(self.Y, axis = 0))
+#                for i in range(k):
+#                    for j in range(d):
+#                        A[i] += self.W[i,j] * self.X[t,j]
+#                        
+#                for i in range(k):
+#                    self.Y[i] = np.exp(A[i]) / np.sum(np.exp(A))
+#                #print("Y: ", self.Y, "Sum of Y: " ,np.sum(self.Y))
+#                    
+#                for i in range(k):
+#                    for j in range(d):
+#                        pred = self.output(self.Y)
+#                        label = self.training_data[t,self.class_index]
+#                        actual = self.identifyClass(label)
+#                        r = 1.0 if pred == actual else 0.0
+#                        error = (r - self.Y[i])
+#                        sum_error += error
+#                        self.W[i,j] = self.W[i,j] + self.lr * error * self.X[t,j]
+#            
+#            #print('>epoch=%d, lrate=%.3f, error=%.3f' % (epoch, self.lr, sum_error))
+#                     
+#   
     def learn(self):
         d = np.size(self.X, axis = 1)
         k = np.size(self.Y)
@@ -71,11 +102,11 @@ class LinearPerceptron(object):
                         r = 1.0 if pred == actual else 0.0
                         error = (r - self.Y[i])
                         sum_error += error
-                        self.W[i,j] = self.W[i,j] + self.lr * error * self.X[t,j]
+                        self.W[i,j] = self.W[i,j] + (self.lr * error * self.X[t,j])
             
             #print('>epoch=%d, lrate=%.3f, error=%.3f' % (epoch, self.lr, sum_error))
                      
-   
+       
     def evaluate(self, T, class_index = -1):
         #remove class for testing
         T_hat = np.delete(T, class_index, axis = 1)
@@ -102,7 +133,7 @@ class LinearPerceptron(object):
             
         
         accuracy = ((sum_error/t * 1.0))*100.0
-        print("[LP] Total errors: " ,sum_error, " Test size: " ,t, " Accuracy: " ,accuracy)
+        print("[LP] Total correct: " ,sum_error, " Test size: " ,t, " Accuracy: %.3f" %(accuracy))
         return accuracy
                 
             

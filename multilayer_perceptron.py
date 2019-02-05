@@ -10,32 +10,35 @@ import numpy as np
 
 class MultilayerPerceptron(object):
     
-    def __init__(self, training_data, learning_rate = 0.001, epochs = 10, class_index = -1, class_size = 3):
+    def __init__(self, training_data, learning_rate = 0.001, epochs = 10, class_index = -1, class_size = 3, hasMomentum = False, momentum = 0.5):
         self.training_data = training_data
         self.class_index = class_index
         self.epochs = epochs
         self.lr = learning_rate
+        self.hasMomentum = hasMomentum
+        self.momentum = momentum
         
         #remove class for training
         self.X = np.delete(self.training_data, class_index, axis = 1)
         self.X = np.insert(self.X, 0, values = 1, axis = 1) #insert bias
         
-        self.Z = np.empty(np.size(self.X, axis = 1)) #create Z (hidden) vector based from X 
-        
         #weight vector to Z initialize
         train_col = np.size(self.X, axis = 1)
-        self.W = np.array([np.random.random(train_col)])
+        self.Z = np.empty(train_col, dtype = np.double) #create Z (hidden) vector based from X 
+        
+        
+        self.W = np.array([np.random.normal(loc = 0, scale = 0.01, size = train_col)], dtype = np.double)
         for i in range(np.size(self.Z, axis = 0)):
-            self.W = np.insert(self.W, 0, values = np.random.random(train_col), axis = 0)
+            self.W = np.insert(self.W, 0, values = np.random.normal(loc = 0, scale = 0.01, size = train_col), axis = 0)
             
         
         #Y output initialize
         self.Y = np.zeros(class_size)
         
         #weight vector to Y initialize
-        self.V = np.array([np.random.random(train_col)])
+        self.V = np.array([np.random.normal(loc = 0, scale = 0.01, size = train_col)], dtype = np.double)
         for i in range(np.size(self.Y, axis = 0)):
-            self.V = np.insert(self.V, 0, values = np.zeros(train_col), axis = 0)
+            self.V = np.insert(self.V, 0, values = np.random.normal(loc = 0, scale = 0.01, size = train_col), axis = 0)
         
         #print("Z: ", np.size(self.Z), "Y: ", np.shape(self.Y), "V: ", np.shape(self.V), "W: ", np.shape(self.W))
  
@@ -62,7 +65,7 @@ class MultilayerPerceptron(object):
             
             for t in range(np.size(self.X, axis = 0)):
                 #compute sigmoid for hidden layer
-                A = np.zeros(np.size(self.Z, axis = 0))
+                A = np.zeros(np.size(self.Z, axis = 0), dtype = np.double)
                 for i in range(k):
                     A[i] += self.W[i,0]
                     for j in range(d - 1):
@@ -74,7 +77,7 @@ class MultilayerPerceptron(object):
                 
                 #compute softmax for Y
                 for i in range(k):
-                    O = np.zeros(np.size(self.Y, axis = 0))
+                    O = np.zeros(np.size(self.Y, axis = 0), dtype = np.double)
                     self.Y[i] += self.V[i, 0]
                     for h in range(d - 1):
                         O[i] += (self.V[i,h + 1] * self.Z[i])
@@ -101,11 +104,19 @@ class MultilayerPerceptron(object):
                 #print("Delta V: " ,np.size(delta_v))
                 
                 delta_w = np.empty(np.shape(self.W))
+                previous_w = np.copy(delta_w) #for momentum
+
                 for i in range(k):
                     for j in range(d):
-                        delta_w[i,j] = (self.lr * w_error * delta_v[i,j]) * (self.Z[i] * (1 - self.Z[i]) * self.X[t,j])
+                        if self.hasMomentum:
+                             delta_w[i,j] = (-1.0 *self.lr * w_error * delta_v[i,j]) * (self.Z[i] * (1 - self.Z[i]) * self.X[t,j])
+                             delta_w[i,j] + self.momentum * previous_w[i,j]
+                        else:
+                            delta_w[i,j] = (self.lr * w_error * delta_v[i,j]) * (self.Z[i] * (1 - self.Z[i]) * self.X[t,j])
+                        
+                        previous_w[i,j] = delta_w[i,j]
                 
-                #print("Delta W: ", delta_w)
+                #print("Delta W: ", delta_w, " Momentum added: " ,(self.momentum * previous_w))
                 
                 for i in range(k):
                     for j in range(d):
@@ -115,6 +126,7 @@ class MultilayerPerceptron(object):
                     for j in range(d):
                         self.W[i,j] = self.W[i,j] + delta_w[i,j]
                 
+                #print("Weights: " ,self.W)
                 
             #print('>epoch=%d, lrate=%.3f, error=%.3f' % (epoch, self.lr, sum_error))
     
@@ -127,21 +139,26 @@ class MultilayerPerceptron(object):
         sum_error = 0.0;
         
         for t in range (np.size(T_hat, axis = 0)):
-            A = np.zeros(np.size(self.Y, axis = 0))
+            #compute sigmoid for hidden layer
+            A = np.zeros(np.size(self.Z, axis = 0), dtype = np.double)
             for i in range(k):
-                for j in range(d):
-                    A[i] += self.W[i,j] * self.X[t,j]
+                A[i] += self.W[i,0]
+                for j in range(d - 1):
+                    A[i] += (self.W[i,j] * self.X[t,j])
                     
             for i in range(k):
-                self.Z[i] = np.exp(A[i]) / np.sum(np.exp(A))
+                self.Z[i] = 1 / (1 + np.exp(-A[i]))
+            
+             #compute softmax for Y
+            for i in range(k):
+                O = np.zeros(np.size(self.Y, axis = 0), dtype = np.double)
+                self.Y[i] += self.V[i, 0]
+                for h in range(d - 1):
+                    O[i] += (self.V[i,h + 1] * self.Z[i])
             
             for i in range(k):
-                total = self.V[i, 0]
-                for h in range(d - 1):
-                    total += (self.V[i,h + 1] * self.Z[i])
-                
-                self.Y[i] = total
-                    
+                self.Y[i] = np.exp(O[i]) / np.sum(np.exp(O))
+                                
 
             pred = self.output(self.Y)
             label = T[t,class_index]
@@ -151,5 +168,5 @@ class MultilayerPerceptron(object):
             
         
         accuracy = ((sum_error/t * 1.0))*100.0
-        print("[MLP] Total errors: " ,sum_error, " Test size: " ,t, " Accuracy: %.3f" %(accuracy))
+        print("[MLP] Total correct: " ,sum_error, " Test size: " ,t, " Accuracy: %.3f" %(accuracy))
         return accuracy
